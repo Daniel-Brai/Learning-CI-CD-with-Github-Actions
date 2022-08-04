@@ -1,0 +1,49 @@
+# Objects in yaml
+app: my-ci-cd-test
+# The above service my-ci-cd test is a valid top level yaml object (key : value)
+# It is also equivalent to json object
+# { "service" : "my-ci-cd-test" }
+
+# It also possible to create nested objects like in json through indentation
+# The indentation must be constistent with each other
+# E.g
+# service:
+#   name: Daniel's CI/CD test
+
+# The json equivalent is:
+# {
+#  "service" : { 
+#      "name" : "Daniel's CI/CD test" 
+#  }
+# }
+
+# Arrays in yaml
+# They are basically a way of organizing elements in a list
+# E.g
+# numbers: [1, 2, 3, 4, 5]
+
+# Again, an array of objects is also possible by beginning each object with a dash (-) on a new line indented with the parent above
+# E.g
+# numbers:
+#   - 1
+#   - 2
+#   - 3
+#   - 4
+#   - 5
+
+# Again with key value pairs
+# E.g
+# names:
+#   - name: Daniel 
+#   - name: John
+#   - name: Jane
+
+# Again with objects with multiple key value pairs
+# E.g
+# users:
+#   - name: Daniel
+#     age: 25
+#   - name: John
+#     age: 30
+#   - name: Jane
+#     age: 28
