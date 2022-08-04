@@ -30,6 +30,12 @@ jobs:
                 node-version: '14.17.0'
             # The below action will print node version of the repository
             - run: node -v 
+            # The below line builds the project after node has been installed
+            # The name keyword specifices what will be shown in the steps of our jobs instead of it being generic
+            - name: Building the project
+              run: npm run build
+            - name: Finished building the project
+              run: echo "Done!"
             # The below action will print the tree structure of the repository
-            - run: tree
+            # - run: tree
 
