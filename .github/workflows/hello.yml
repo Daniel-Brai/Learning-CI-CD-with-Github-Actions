@@ -40,6 +40,13 @@ jobs:
               run: npm install
             - name: Building the project
               run: npm run build
+            - name: Set vercel env
+              run: |
+                cd build
+                mkdir .vercel
+                cd .vercel
+                touch project.json
+                echo "{\"projectId\": \"$VERCEL_PROJECT_ID\", \"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
             - name: Deploying to vercel
               run: npm run deploy
             - name: Finished building the project
