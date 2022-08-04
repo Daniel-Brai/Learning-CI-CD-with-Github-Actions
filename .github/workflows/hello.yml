@@ -47,6 +47,8 @@ jobs:
                 cd .vercel
                 touch project.json
                 echo "{\"projectId\":\"$VERCEL_PROJECT_ID\",\"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
+            - name: Retrieve project settings
+              run: npm run retrive
             - name: Deploying to vercel
               run: npm run deploy
             - name: Finished building the project
