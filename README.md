@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Testing of CI and CD with Github Actions on a React App
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
