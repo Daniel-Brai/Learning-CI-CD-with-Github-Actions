@@ -22,7 +22,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             # using default actions to work with my repository easily
+            # The line action with any configuration will just clone to current repository
             - uses: actions/checkout@v2
-            # The above action with any configuration will just clone to current repository
+            # The line below tells the job to use a node setup with the version 14
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '14.17.0'
+            # The below action will print node version of the repository
+            - run: node -v 
+            # The below action will print the tree structure of the repository
             - run: tree
-            # The above action will print the tree structure of the repository
+
