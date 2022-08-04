@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "retrieve": "vercel pull --yes",
-    "deploy": "vercel --cwd build --prod --token=$VERCEL_TOKEN"
+    "deploy": "vercel --cwd build --prod --confirm --token=$VERCEL_TOKEN"
   },
   "eslintConfig": {
     "extends": [

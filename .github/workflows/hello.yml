@@ -21,8 +21,8 @@ jobs:
     build-react-app:
         runs-on: ubuntu-latest
         env:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}}} 
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}}}
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }} 
             VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         steps:
             # using default actions to work with my repository easily
@@ -46,7 +46,7 @@ jobs:
                 mkdir .vercel
                 cd .vercel
                 touch project.json
-                echo "{\"projectId\": \"$VERCEL_PROJECT_ID\", \"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
+                echo "{\"projectId\":\"$VERCEL_PROJECT_ID\",\"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
             - name: Deploying to vercel
               run: npm run deploy
             - name: Finished building the project
