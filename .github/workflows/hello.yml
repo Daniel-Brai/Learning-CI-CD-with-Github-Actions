@@ -35,7 +35,7 @@ jobs:
             - name: Install node_modules
               run: npm install
             - name: Building the project
-              run: npm run 
+              run: npm run build
             - name: Deploying to vercel
               env:
                 VERCEL_ORG_ID: HvVbqzz8dd1ZKUfcgnLIV7yG
