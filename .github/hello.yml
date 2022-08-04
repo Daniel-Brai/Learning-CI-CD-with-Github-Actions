@@ -1,0 +1,20 @@
+# The first thing that github actions need is a name key
+name: My first github action
+#  The second thing it needs is the on keyword telling it when to run
+on: [push]
+# The above line tells to run the action when a push is made to the repository
+# The next thing it needs is the jobs keyword
+# That tells it what to do when the action is triggered
+jobs:
+# Note there could be multiple jobs in a single action
+# To make jobs run sequentially, we can use the dash symbol to specify a list
+# Below we are going to name a job called print-hello-world
+    print-hello-world:
+        # The next thing we need to do is specify the type of machine to run the job on
+        runs-on: ubuntu-latest
+        # The next thing we need to do is specify the steps to run the job
+        steps:
+        # we need to specify a list of steps to run because they are executed sequentially
+            - run: echo "Hello World" 
+            # The above line tells the job to run the echo command to print hello world
+            - run: echo "The time is $(date)"

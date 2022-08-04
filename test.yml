@@ -47,3 +47,16 @@ app: my-ci-cd-test
 #     age: 30
 #   - name: Jane
 #     age: 28
+
+# Multi-line strings in yaml
+# They are basically strings that span multiple lines
+# E.g
+# message: I am Daniel
+#   I am a software developer
+#   I am a third year student at the University of Ibadan
+
+# message can be written like this using the pipe operator
+# message: |
+#   I am Daniel
+#   I am a software developer
+#   I am a third year student at the University of Ibadan
