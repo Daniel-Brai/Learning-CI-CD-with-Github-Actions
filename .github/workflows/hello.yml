@@ -18,3 +18,11 @@ jobs:
             - run: echo "Hello World" 
             # The above line tells the job to run the echo command to print hello world
             - run: echo "The time is $(date)"
+    build-react-app:
+        runs-on: ubuntu-latest
+        steps:
+            # using default actions to work with my repository easily
+            - uses: actions/checkout@v2
+            # The above action with any configuration will just clone to current repository
+            - run: tree
+            # The above action will print the tree structure of the repository
