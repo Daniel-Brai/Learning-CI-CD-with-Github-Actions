@@ -35,7 +35,12 @@ jobs:
             - name: Install node_modules
               run: npm install
             - name: Building the project
-              run: npm run build
+              run: npm run 
+            - name: Deploying to vercel
+              env:
+                VERCEL_ORG_ID: HvVbqzz8dd1ZKUfcgnLIV7yG
+                VERCEL_PROJECT_ID: prj_KgDPETsc7Smo0HEMEOPWAkbYT7EL
+              run: npm run deploy
             - name: Finished building the project
               run: echo "Done!"
             # The below action will print the tree structure of the repository
